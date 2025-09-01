@@ -26,6 +26,7 @@ Edit `config.json` to configure your camera:
 {
   "port": 8080,
   "camera": {
+    "deviceName": "Iriun Webcam",
     "deviceId": 0,
     "width": 640,
     "height": 480,
