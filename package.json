@@ -1,0 +1,29 @@
+{
+  "name": "mjpeg-camera-streamer",
+  "version": "1.0.0",
+  "description": "Simple MJPEG camera streamer for OctoPrint on Windows",
+  "main": "app.js",
+  "bin": {
+    "mjpeg-streamer": "app.js",
+    "detect-cameras": "detect-cameras.js"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "detect": "node detect-cameras.js",
+    "check-caps": "node check-camera-caps.js",
+    "build": "pkg app.js --targets node18-win-x64 --output dist/mjpeg-streamer.exe && pkg detect-cameras.js --targets node18-win-x64 --output dist/detect-cameras.exe && pkg check-camera-caps.js --targets node18-win-x64 --output dist/check-camera-caps.exe"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  },
+  "pkg": {
+    "scripts": ["*.js"],
+    "outputPath": "dist"
+  },
+  "keywords": ["mjpeg", "camera", "streaming", "octoprint", "windows"],
+  "author": "",
+  "license": "MIT"
+}
